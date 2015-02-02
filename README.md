@@ -37,6 +37,10 @@ The js used in the demos are here, https://github.com/victorhaggqvist/touch-imag
 The CSS (and SCSS source) used to achive the demos comes with the bower package.
 ###Options and defaults
 
+**NEW:**
+Add two new options : targetSelector and targetAttr 
+
+
 ```js
 $(selector).imageLightbox({
     selector:       'id="imagelightbox"',   // string;
@@ -44,6 +48,8 @@ $(selector).imageLightbox({
     animationSpeed: 250,                    // integer;
     preloadNext:    true,                   // bool;            silently preload the next image
     enableKeyboard: true,                   // bool;            enable keyboard shortcuts (arrows Left/Right and Esc)
+    targetSelector:  'a',                   // string           a html tag
+    targetAttr    :  'href',                // string           an existing or custom html attr (data-href for example)
     quitOnEnd:      false,                  // bool;            quit after viewing the last image
     quitOnImgClick: false,                  // bool;            quit when the viewed image is clicked
     quitOnDocClick: true,                   // bool;            quit when anything but the viewed image is clicked
