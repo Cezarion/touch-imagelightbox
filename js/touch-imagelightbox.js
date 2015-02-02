@@ -50,6 +50,8 @@
              {
               selector:       'id="imagelightbox"',
               allowedTypes:   'png|jpg|jpeg|gif',
+              targetSelector:  'a',
+              targetAttr    :  'href',
               animationSpeed: 250,
               preloadNext:    true,
               enableKeyboard: true,
@@ -75,7 +77,7 @@
         /*jshint -W044*/
         options.regexValidObject = new RegExp("(\.("+options.allowedTypes+")$)");
         /*jshint +W044*/
-        return $( element ).prop( 'tagName' ).toLowerCase() === 'a' && options.regexValidObject.test($(element).attr('href') );
+        return $( element ).prop( 'tagName' ).toLowerCase() === options.targetSelector && options.regexValidObject.test($(element).attr(options.targetAttr) );
       },
 
       setImage = function() {
@@ -144,7 +146,7 @@
 
         setTimeout( function() {
           image = $( '<img ' + options.selector + ' />' )
-          .attr( 'src', target.attr( 'href' ) )
+          .attr( 'src', target.attr( options.targetAttr ) )
           .load( function()
           {
             image.appendTo( 'body' );

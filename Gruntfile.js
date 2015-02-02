@@ -116,6 +116,8 @@ module.exports = function(grunt) {
   // Default task.
   grunt.registerTask('default', ['clean', 'jshint:main', 'concat', 'uglify', 'sass']);
 
+  grunt.registerTask('jsbuild', ['clean', 'jshint:main', 'concat', 'uglify']);
+
   grunt.registerTask('demo', ['default', 'copy']);
 
 };

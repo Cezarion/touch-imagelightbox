@@ -2,7 +2,8 @@
   "name": "touch-imagelightbox",
   "version": "0.1.5",
   "authors": [
-    "Victor Häggqvist <victor@snilius.com>"
+    "Victor Häggqvist <victor@snilius.com>",
+    "Mathias Gorenflot <cezarion@cezarion.net> -- Minor update"
   ],
   "description": "A touch-friendly image lightbox",
   "main": "dist/touch-imagelightbox.min.js",

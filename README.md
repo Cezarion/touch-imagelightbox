@@ -36,6 +36,7 @@ The js used in the demos are here, https://github.com/victorhaggqvist/touch-imag
 
 The CSS (and SCSS source) used to achive the demos comes with the bower package.
 ###Options and defaults
+
 ```js
 $(selector).imageLightbox({
     selector:       'id="imagelightbox"',   // string;
